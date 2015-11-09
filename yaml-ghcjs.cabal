@@ -1,0 +1,22 @@
+name: yaml-ghcjs
+version: 0.1.0.0
+homepage: http://github.com/imalsogreg/yaml-ghcjs
+license: MIT
+license-file: LICENSE
+author: Greg Hale
+maintainer: imalsogreg@gmail.com
+category: web
+build-type: Simple
+cabal-version: >= 1.10
+
+library
+  hs-source-dirs: src
+  js-sources: js-yaml/js-yaml.js
+  ghcjs-options: -O2 -Wall
+  exposed-modules: Data.Yaml
+                   Data.Yaml.Internal
+  build-depends: base       >= 4.7     && < 4.9,
+                 aeson      >= 0.9     && < 0.10,
+                 ghcjs-base >= 0.1.0.0 && < 0.2,
+                 text       >= 1.2     && < 1.3
+  default-language: Haskell2010
