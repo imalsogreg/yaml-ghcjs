@@ -22,7 +22,7 @@ decodeYaml t = do
 
 
 #ifdef __GHCJS__
-foreign import javascript unsafe "load($1)" y_load :: JSString -> JSRef A.Value
+foreign import javascript unsafe "jsyaml.load($1)" y_load :: JSString -> JSRef A.Value
 #else
 y_load = error "y_load only supported by ghcjs"
 #endif

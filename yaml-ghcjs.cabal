@@ -14,9 +14,18 @@ library
   js-sources: js-yaml/js-yaml.js
   ghcjs-options: -O2 -Wall
   exposed-modules: Data.Yaml
-                   Data.Yaml.Internal
   build-depends: base       >= 4.7     && < 4.9,
                  aeson      >= 0.9     && < 0.10,
                  ghcjs-base >= 0.1.0.0 && < 0.2,
                  text       >= 1.2     && < 1.3
+  default-language: Haskell2010
+
+executable printvalue
+  hs-source-dirs: exec
+  main-is: printvalue.hs
+  build-depends: base,
+                 aeson,
+                 string-qq,
+                 text,
+                 yaml-ghcjs
   default-language: Haskell2010
